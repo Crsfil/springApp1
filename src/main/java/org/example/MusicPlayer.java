@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MusicPlayer {
@@ -35,14 +36,12 @@ public class MusicPlayer {
         this.volume = volume;
     }
 
-    public MusicPlayer(Music music) {
-        this.playlist = setPlaylist();
-    }
-
     public MusicPlayer() {
     }
 
     public void playMusic() {
-        System.out.println("playing music " + music.getSong());
+        for (Music music : playlist) {
+            System.out.println("Playing: "+ music.getSong());
+        }
     }
 }
