@@ -1,15 +1,18 @@
 package org.example;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+@Component
 public class MusicPlayer {
     private List<Music> playlist =  new ArrayList<>();
     private String name;
     private int volume;
 
-
+    @Autowired
     public void setPlaylist(List<Music> playlist) {
         this.playlist = playlist;
     }
